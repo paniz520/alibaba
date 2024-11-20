@@ -1,0 +1,529 @@
+@font-face {
+    font-family: alibaba;
+    src: url(fonts/alibaba-regular.woff2-5d2979c4.woff2);
+}
+@font-face {
+    font-family: alibaba-bold;
+    src: url(fonts/alibaba-bold.woff2-bbb24413.woff2);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --maincolor: #4b5259;
+}
+body{
+    font-family: alibaba;
+}
+.BlogGif{
+    width:100%;
+    height:fit-content;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top:0;
+}
+/* --------------Header--------------- */
+
+.BlogHeader__DivMain{
+    margin-top: 3.125rem;
+    width:100%;
+    height:4rem;
+    box-shadow: 0 1.5px 7px 1.5px #c4c1c13f;
+   display: flex;
+}
+.BlogHeader__DivLarger{
+    width:70%;
+    display: flex;
+    align-items: center;
+}
+.BlogHeader__DivLarger--ul{
+    height:90%;
+    width:70%;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.BlogHeader__DivLarger--ul li a{
+    color:var(--maincolor);
+    text-decoration: none;
+}
+.BlogHeader__DivSmaller{
+    width:30%;
+    display: flex;
+    align-items: center;
+}
+.BlogHeader__DivSmaller svg{
+    margin-left: 5rem;
+}
+
+/* ------------ blog stories------------- */
+.BlogStories{
+ width:92%;
+ height: 8rem;
+ margin: 1rem auto;
+ display: flex;
+ justify-content: space-evenly;
+}
+.BlogStories__Item{
+    width:7rem;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: .75rem;
+    font-family: alibaba-bold;
+    text-align: center;
+}
+.BlogStories__Item img{
+    border-radius: 50%;
+    padding: .3rem;
+    border: 2px solid #FDB913
+}
+.BlogStories__Item span{
+    padding: .4rem;
+}
+
+.active-stories{
+     position: fixed;
+     top: 0;
+    width:100vw;
+    height:100vh;
+    background-color: #181616d8;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.active-stories img{
+    border-radius: 10px;
+}
+.active-stories span{
+    display: flex;
+    color:white;
+    padding: .6rem;
+    
+}
+.active-stories-close{
+    position: absolute;
+    top: 6rem;
+    right: 29rem;
+}
+
+/* ----------- blogNews1 --------- */
+.blogNews1{
+    width: 77.875rem;
+    height: 37.875rem;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-areas: 
+     'pt1 pt1 pt1 pt2 pt2 pt2'
+     'pt3 pt3 pt4 pt4 pt5 pt5';
+     grid-gap: 10px;
+     grid-template-rows: 1.5fr 1fr;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+.blogNews1__pt1{
+    grid-area: pt1;
+    border-radius: 10px;
+    background-image:linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, #000),
+     url(image/نمای-کامل-آرامگاه-فردوسی-1024x682.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: background-size .3s ease-in-out;    /*not working */
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+.blogNews1__pt1 div{
+    width: 90%;
+    height:10%;
+    display: flex;
+    font-weight: 700;
+    color: white;
+    font-size: 22px;
+    margin-bottom: 1rem;
+}
+.blogNews1__pt1 div p{
+   text-shadow: 0 0 5px rgba(255,255,255,.2);
+}
+.blogNews1__pt1:hover{
+background-size: 110%;
+}
+.blogNews1__pt2{
+    background-color: rgb(48, 43, 40);
+    grid-area: pt2;
+    border-radius: 10px;
+    background-image:linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, #000)
+    ,  url(image/yerevan-attractions-1024x563.webp);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+.blogNews1__pt2 div{
+    width: 90%;
+    height:10%;
+    display: flex;
+    font-weight: 700;
+    color: white;
+    font-size: 22px;
+    margin-bottom: 1rem;
+}
+.blogNews1__pt2 div p{
+   text-shadow: 0 0 5px rgba(255,255,255,.2);
+}
+.blogNews1__pt2:hover{
+    background-size: 110%;
+    }
+.blogNews1__pt3{
+    background-color: rgb(228, 192, 167);
+    grid-area: pt3;
+    border-radius: 10px;
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, #000)
+    , url(image/van-turkey-1024x563.webp);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+.blogNews1__pt3 div{
+    width: 87%;
+    height:20%;
+    display: flex;
+    font-weight: 700;
+    color: white;
+    font-size: 17px;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+.blogNews1__pt3 div p{
+   text-shadow: 0 0 5px rgba(255,255,255,.2);
+   text-align: right;
+}
+.blogNews1__pt3:hover{
+    background-size: 110%;
+    }
+.blogNews1__pt4{
+    background-color: rgb(68, 33, 7);
+    grid-area: pt4;
+    border-radius: 10px;
+    background-image:  linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, #000), url(image/russia.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+.blogNews1__pt4 div{
+    width: 87%;
+    height:20%;
+    display: flex;
+    font-weight: 700;
+    color: white;
+    font-size: 17px;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+.blogNews1__pt4 div p{
+   text-shadow: 0 0 5px rgba(255,255,255,.2);
+   text-align: right;
+}
+.blogNews1__pt4:hover{
+    background-size: 110%;
+    }
+.blogNews1__pt5{
+    background-color: rgb(224, 165, 123);
+    grid-area: pt5;
+    border-radius: 10px;
+
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, #000)
+    , url(image/deyvaznav-village-1024x563.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+.blogNews1__pt5 div{
+    width: 87%;
+    height:20%;
+    display: flex;
+    font-weight: 700;
+    color: white;
+    font-size: 17px;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+.blogNews1__pt5 div p{
+   text-shadow: 0 0 5px rgba(255,255,255,.2);
+   text-align: right;
+}
+.blogNews1__pt5:hover{
+    background-size: 110%;
+    }
+/* ------------ جدید ترین مطالب -------------- */
+.jadidNews{
+    width:92%;
+    height:4rem;
+    margin: 0 auto;
+    font-family: alibaba-bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.jadidNews span{
+    text-align: right;
+    width:18%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 1rem;
+}
+.jadidNews::before{
+    
+        content: '';
+        width: 100%;
+        background: url(image/download\ 2.png) repeat;
+        opacity: .2;
+        height: 8px;
+        margin-top: -4px;
+}
+.blogNews2{
+    width: 77.875rem;
+    height: 47.18rem;
+    background-color: #F7F7F7;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.blogNews2__grid{
+    width:100%;
+    height:80%;
+    display: grid;
+    grid-template-areas:
+     'pt1 pt2 pt3 pt4'
+     'pt5 pt6 pt7 pt8';
+     grid-gap: 10px;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr;
+     padding: 1.5rem;
+}
+.blogNews2__pt1{
+    grid-area: pt1;
+    border-radius: 10px;
+    background-color: white;
+}
+.blogNews2__pt1--image img{
+    border-radius: 10px 10px 0 0;
+}
+.blogNews2__pt1--link{
+    width: 90%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+}
+.blogNews2__pt1--link a{
+    font-family: alibaba-bold;
+    color:#000;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+
+.blogNews2__pt2{
+    grid-area: pt2;
+    border-radius: 10px;
+    background-color: white;
+}
+.blogNews2__pt2--image img{
+    border-radius: 10px 10px 0 0;
+}
+.blogNews2__pt2--link{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+}
+.blogNews2__pt2--link a{
+    width: 80%;
+    font-family: alibaba-bold;
+    color:#000;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+
+.blogNews2__pt3{
+    grid-area: pt3;
+    border-radius: 10px;
+    background-color: white;
+}
+.blogNews2__pt3--image img{
+    border-radius: 10px 10px 0 0;
+}
+.blogNews2__pt3--link{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+}
+.blogNews2__pt3--link a{
+    width: 90%;
+    font-family: alibaba-bold;
+    color:#000;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.blogNews2__pt4{
+    grid-area: pt4;
+    border-radius: 10px;
+    background-color: white;
+}
+.blogNews2__pt4--image img{
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+}
+.blogNews2__pt4--link{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+}
+.blogNews2__pt4--link a{
+    width: 90%;
+    font-family: alibaba-bold;
+    color:#000;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.blogNews2__pt5{
+    grid-area: pt5;
+    border-radius: 10px;
+    background-color: white;
+}
+.blogNews2__pt5--image img{
+    border-radius: 10px 10px 0 0;
+    width:100%;
+}
+.blogNews2__pt5--link{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+}
+.blogNews2__pt5--link a{
+    width: 90%;
+    font-family: alibaba-bold;
+    color:#000;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.blogNews2__pt6{
+    grid-area: pt6;
+    border-radius: 10px;
+    background-color: white;
+}
+.blogNews2__pt6--image img{
+    border-radius: 10px 10px 0 0;
+}
+.blogNews2__pt6--link{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+}
+.blogNews2__pt6--link a{
+    width: 80%;
+    font-family: alibaba-bold;
+    color:#000;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.blogNews2__pt7{
+    grid-area: pt7;
+    border-radius: 10px;
+    background-color: white;
+}
+.blogNews2__pt7--image img{
+    border-radius: 10px 10px 0 0;
+}
+.blogNews2__pt7--link{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+}
+.blogNews2__pt7--link a{
+    width: 90%;
+    font-family: alibaba-bold;
+    color:#000;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.blogNews2__pt8{
+    grid-area: pt8;
+    border-radius: 10px;
+    background-color: white;
+}
+.blogNews2__pt8--image img{
+    border-radius: 10px 10px 0 0;
+}
+.blogNews2__pt8--link{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+}
+.blogNews2__pt8--link a{
+    width: 90%;
+    font-family: alibaba-bold;
+    color:#000;
+    font-size: 17px;
+    text-decoration: none;
+}
+.blogNews2__button{
+    width:7rem;
+    height: 3.4rem;
+    background-color: #F7BE68;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 7px;
+    margin-top: 1rem;
+}
